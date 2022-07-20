@@ -1,4 +1,8 @@
-﻿namespace Combinations
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Combinations
 {
     public static class Permutations
     {
@@ -25,6 +29,17 @@
         {
             var random = new Random();
             return ts.OrderBy(t => random.Next());
+        }
+
+        public static IEnumerable<(T first, T second)> Pairs<T>(this IList<T> ts)
+        {
+            for (int i = 0; i < ts.Count; i++)
+            {
+                for (int j = i + 1; j < ts.Count; j++)
+                {
+                    yield return (ts[i], ts[j]);
+                }
+            }
         }
     }
 }

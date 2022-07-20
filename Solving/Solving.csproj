@@ -54,5 +54,11 @@
       <Version>3.1.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Combinations\Combinations.csproj">
+      <Project>{911b06e7-604e-4857-8e3f-65f70b831344}</Project>
+      <Name>Combinations</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
